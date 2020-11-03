@@ -21,7 +21,7 @@ class Playar(pygame.sprite.Sprite):
         self.rect.center = (WIDTH / 2, HEIGHT / 2)
 
     def update(self):
-        self.rect.x += 5
+        self.rect.x += 1
         if self.rect.left > WIDTH:
             self.rect.right = 0
 
@@ -39,9 +39,9 @@ pygame.display.set_caption('mu first game')
 clock = pygame.time.Clock()
 # clock что бы убедится в правельной скорости
 
-all_sprites = pygame.sprite.Group()
+all_sprites = pygame.sprite.Group()  #
 playar = Playar()
-all_sprites.add(playar)
+all_sprites.add(playar)#определение спрайта игрока(playar)
 
 running = True  # цикл игры
 while running:
